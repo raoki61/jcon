@@ -1,11 +1,13 @@
 Jcon::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/school_info"
-  get "static_pages/profile"
-  get "static_pages/plan"
-  get "static_pages/help"
+  root  'static_pages#home'
+  match '/school_info',    to: 'static_pages#school_info',    via: 'get'
+  match '/profile',   to: 'static_pages#profile',   via: 'get'
+  match '/plan', to: 'static_pages#plan', via: 'get'
+  match '/help', to: 'static_pages#help', via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all your routes lay out with "rake routes". school_info
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
