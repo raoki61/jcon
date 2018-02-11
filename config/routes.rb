@@ -1,4 +1,9 @@
 Jcon::Application.routes.draw do
+  get "static_pages/home"
+  get "static_pages/school_info"
+  get "static_pages/profile"
+  get "static_pages/plan"
+  get "static_pages/help"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
